@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+*.py[cod]
+/.mypy_cache/
+
+*temp*
+
+# Python
+venv/
+env/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data files (don't commit data to Git!)
+*.csv
+*.xlsx
+*.parquet
+*.hdf5
+data/raw/
+data/processed/
+
+# Output files
+*.png
+*.pdf
+plots/
+results/
+
+# Sensitive
+.env
+config/secrets.json
+*.key
+
+# OS
+.DS_Store
+Thumbs.db

@@ -127,58 +127,9 @@ import pandas as pd  # This imports from your venv, not system Python
 - Forget which environment you're using (check status bar!)
 - Mix conda and venv (pick one and stick with it)
 
-### **Troubleshooting**
-
-**"Module not found" error:**
-```python
-ImportError: No module named 'pandas'
-```
-**Solution:** Check your Python interpreter (bottom-left) - is it using your venv?
-
-**"Permission denied" when installing:**
-```bash
-# Don't use sudo! Just activate venv:
-source venv/bin/activate
-pip install pandas  # Now it works
-```
-
-**VS Code not finding venv:**
-```bash
-# Make sure it's in your project root:
-your_project/
-├── venv/
-├── data/
-└── scripts/
-```
-
 ---
 
 ## 🔗 GitHub Integration {#github-integration}
-
-### **Why GitHub for Data Scientists?**
-
-**Common Data Science Workflow Problems:**
-
-| Problem | GitHub Solution |
-|---------|-----------------|
-| "I broke my analysis script, can't undo" | Every version saved in Git history |
-| "Which version did I send to the PI?" | Tagged releases, commit messages |
-| "Collaborator overwrote my changes" | Merge conflicts detected automatically |
-| "Lost a week of work when laptop died" | Everything backed up on GitHub |
-| "Can't remember what this script does" | Commit messages document your thought process |
-
-### **Installing GitHub Extension**
-
-1. **Install Extension:**
-   - Press `Ctrl+Shift+X` (Extensions)
-   - Search: "GitHub Pull Requests and Issues"
-   - Install the official GitHub extension
-
-2. **Sign In:**
-   - Click GitHub icon in sidebar (or `Ctrl+Shift+G`)
-   - Click "Sign in to GitHub"
-   - Authorize VS Code in your browser
-   - Done! ✅
 
 ### **Git Basics in VS Code**
 
@@ -237,52 +188,11 @@ df = df.dropna()  # Added this line
 + df = pd.read_csv('housing.csv')
 + df = df.dropna()  # New version with cleaning step
 ```
-
-### **Commit Message Best Practices**
-
-**❌ Bad Messages:**
-```
-"Updated file"
-"Fix"
-"Changes"
-"asdfasdf"
-```
-
-**✅ Good Messages:**
-```
-"Remove outliers from housing price column"
-"Add visualization for income distribution"
-"Fix bug in date parsing for RECS data"
-"Update README with installation instructions"
-```
-
-**Format:**
-```
-Short summary (50 chars or less)
-
-Optional longer explanation:
-- What changed
-- Why you changed it
-- Any important notes
-```
-
 ### **Common Workflows**
 
 #### **Scenario 1: Starting a New Project**
 
-```bash
-# In VS Code terminal:
-cd /path/to/your/project
-git init
-git add .
-git commit -m "Initial commit with data cleaning scripts"
-
-# Create repo on GitHub (github.com/new)
-git remote add origin https://github.com/yourusername/project.git
-git push -u origin main
-```
-
-Or use VS Code:
+Use VS Code:
 1. `Ctrl+Shift+P` → "Publish to GitHub"
 2. Choose public/private
 3. Done!
@@ -302,7 +212,6 @@ Afternoon:
 Evening:
 6. Pull again before going home
 ```
-
 #### **Scenario 3: "Oh no, I broke everything!"**
 
 **Going back in time:**
